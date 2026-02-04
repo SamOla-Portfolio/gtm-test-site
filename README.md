@@ -14,6 +14,7 @@ graph TD
 
 ```
 
+
 📊 Measurement Plan (Tagging Strategy)
 
 Event Name Trigger Type Parameters Business Goal
@@ -21,6 +22,7 @@ begin_checkout Click (ID: #cta-button) currency, value Track user intent to buy
 file_download Click (Link: .pdf) file_name Monitor CV downloads
 outbound_click Click (Link: external) link_url Measure exit traffic to Google
 cookie_consent_update CMP Interaction
+
 
 
 ## 🛠️ Tech Stack
