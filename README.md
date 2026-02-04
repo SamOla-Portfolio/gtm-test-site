@@ -11,7 +11,7 @@ graph TD
     Consent -- YES --> GTM[🚀 GTM Fires Tags]
     Consent -- NO --> Block[🛑 No Data Sent]
     GTM --> GA4(Google Analytics)
-
+,,,
 
 
 📊 Measurement Plan (Tagging Strategy)
