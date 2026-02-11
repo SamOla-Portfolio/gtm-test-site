@@ -1,5 +1,5 @@
 # Debug Diary (Felsökningslogg)
-# Den här loggen dokumenterar min testprocess, validering av taggar i GTM och datakvalitetskontroller för Case Study.
+## Den här loggen dokumenterar min testprocess, validering av taggar i GTM och datakvalitetskontroller för Case Study.
 
 | Datum | Vad jag testade (Test Case) | Förväntat Resultat | Resultat i DebugView | Status | Noteringar |
 | :--- | :--- | :--- | :--- | :--- | :--- |
