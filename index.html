@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-    <!-- Google Tag Manager -->
+        <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -10,27 +10,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min GTM Sandbox</title>
+    <title>Premium Headphones - Checkout</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+        .container { width: 80%; max-width: 800px; margin: 40px auto; overflow: hidden; padding: 30px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.05); border-radius: 8px; }
+        .product-image { width: 100%; height: 350px; background-color: #e9ecef; text-align: center; line-height: 350px; color: #6c757d; font-size: 24px; margin-bottom: 20px; border-radius: 4px; }
+        
+        /* هذا العنصر هو الذي يفرض وجود شريط التمرير (Scroll) في الصفحة */
+        .spacer { height: 1200px; background: linear-gradient(to bottom, #ffffff, #f1f3f5); padding: 20px; border: 1px dashed #ced4da; margin-bottom: 30px; text-align: center; color: #868e96; }
+        
+        .checkout-section { text-align: center; padding: 40px 20px; background-color: #e9ecef; border-radius: 8px; border: 1px solid #dee2e6; }
+        
+        /* الزر المستهدف لتتبع التردد */
+        #checkout-btn { padding: 15px 40px; font-size: 18px; font-weight: bold; color: white; background-color: #0d6efd; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.2s; }
+        #checkout-btn:hover { background-color: #0b5ed7; }
+        
+        /* رسالة النجاح المخفية افتراضياً */
+        #success-message { display: none; margin-top: 20px; padding: 20px; background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; border-radius: 5px; font-size: 18px; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
+     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW6SF9T7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <h1>Välkommen till min testsajt!</h1>
-    <p>Här ska vi testa spårning.</p>
+    <div class="container">
+        <h1>Premium Wireless Headphones (Test Product)</h1>
+        <div class="product-image">[ Product Image Placeholder ]</div>
+        <p>Welcome to our store. Please scroll down to review the product details and complete your secure checkout.</p>
 
-    <button id="cta-button" style="padding:10px; font-size:16px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
-        Köp Nu (Test)
-    </button>
+        <div class="spacer">
+            <h2>Product Details & Specifications</h2>
+            <p>Keep scrolling... (This space simulates a long sales page to test the Scroll Depth trigger in GTM).</p>
+            </div>
 
-    <br><br>
+        <div class="checkout-section">
+            <h2>Ready to Complete Your Order?</h2>
+            <button id="checkout-btn">Complete Purchase</button>
+            
+            <div id="success-message">Payment Successful! Thank you for your order.</div>
+        </div>
+    </div>
 
-    <a href="https://www.google.se" target="_blank">Gå till Google (Utgående länk)</a>
-
-    <br><br>
-
-    <a href="/sida-som-inte-finns">Testa 404-fel</a>
+    <script>
+        // سكربت بسيط لإخفاء الزر وإظهار رسالة النجاح عند النقر
+        document.getElementById('checkout-btn').addEventListener('click', function() {
+            this.style.display = 'none'; 
+            document.getElementById('success-message').style.display = 'block'; 
+        });
+    </script>
 </body>
 </html>
-
