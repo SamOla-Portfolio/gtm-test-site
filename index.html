@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-          <!-- Google Tag Manager -->
+           <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -45,6 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 20px;
             border-radius: 8px;
             margin-top: 30px;
+            margin-bottom: 30px;
         }
         .buy-button {
             background-color: #0d6efd;
@@ -58,6 +58,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         .buy-button:hover {
             background-color: #0b5ed7;
+        }
+        .extra-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 16px;
+        }
+        .extra-links a {
+            color: #510e9e;
+            text-decoration: underline;
+        }
+        .extra-links a.blue-link {
+            color: #0000ee;
         }
     </style>
 </head>
@@ -77,8 +93,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="checkout-box">
             <h3>Ready to Complete Your Order?</h3>
-            
             <button id="complete-purchase-btn" class="buy-button">Complete Purchase</button>
+        </div>
+
+        <div class="extra-links">
+            <a href="https://www.google.com" target="_blank">Gå till Google (Utgående länk)</a>
+            <a href="/404-error-page-test.html" class="blue-link">Testa 404-fel</a>
         </div>
     </div>
 
