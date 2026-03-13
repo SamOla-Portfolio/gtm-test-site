@@ -99,9 +99,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="extra-links">
             <a href="https://www.google.com" target="_blank">Gå till Google (Utgående länk)</a>
             <a href="/404-error-page-test.html" class="blue-link">Testa 404-fel</a>
-                   <a href="#" class="termly-display-preferences">Consent Preferences</a>
+            <a href="#" class="termly-display-preferences">Consent Preferences</a>
         </div>
     </div>
 
+    <script>
+        document.getElementById('complete-purchase-btn').addEventListener('click', function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'begin_checkout',
+                'ecommerce': {
+                    'currency': 'SEK',
+                    'value': 1999.00,
+                    'items': [
+                        {
+                            'item_id': 'SKU_12345',
+                            'item_name': 'Premium Wireless Headphones',
+                            'item_category': 'Electronics',
+                            'price': 1999.00,
+                            'quantity': 1
+                        }
+                    ]
+                }
+            });
+            alert('Tack för ditt köp! (Detta är ett test)'); 
+        });
+    </script>
 </body>
 </html>
