@@ -8,7 +8,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TW6SF9T7');</script>
 <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testbutik - GTM</title>
     
@@ -55,9 +55,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-weight: bold;
             border-radius: 4px;
             cursor: pointer;
+            margin: 5px;
         }
         .buy-button:hover {
             background-color: #0b5ed7;
+        }
+        .cart-button {
+            background-color: #198754;
+        }
+        .cart-button:hover {
+            background-color: #157347;
         }
         .extra-links {
             margin-top: 20px;
@@ -82,18 +89,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW6SF9T7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <div class="container">
+   <div class="container">
         <h2>Premium Wireless Headphones (Test Product)</h2>
 
         <div class="image-placeholder">
             [ Product Image Placeholder ]
         </div>
 
-        <p>Welcome to our store. Click the button below to complete your secure checkout.</p>
+        <p>Welcome to our store. Check out our product, add it to your cart, and complete your secure checkout.</p>
 
         <div class="checkout-box">
-            <h3>Ready to Complete Your Order?</h3>
-            <button id="complete-purchase-btn" class="buy-button">Complete Purchase</button>
+            <h3>Ready to Order?</h3>
+            <button id="add-to-cart-btn" class="buy-button cart-button">Add to Cart</button>
+            <button id="complete-purchase-btn" class="buy-button">Begin Checkout</button>
         </div>
 
         <div class="extra-links">
@@ -104,6 +112,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
+        // 1. إطلاق حدث view_item بمجرد تحميل الصفحة
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'view_item',
+            'ecommerce': {
+                'currency': 'SEK',
+                'value': 1999.00,
+                'items': [
+                    {
+                        'item_id': 'SKU_12345',
+                        'item_name': 'Premium Wireless Headphones',
+                        'item_category': 'Electronics',
+                        'price': 1999.00,
+                        'quantity': 1
+                    }
+                ]
+            }
+        });
+
+        // 2. إطلاق حدث add_to_cart عند النقر على الزر الجديد
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'add_to_cart',
+                'ecommerce': {
+                    'currency': 'SEK',
+                    'value': 1999.00,
+                    'items': [
+                        {
+                            'item_id': 'SKU_12345',
+                            'item_name': 'Premium Wireless Headphones',
+                            'item_category': 'Electronics',
+                            'price': 1999.00,
+                            'quantity': 1
+                        }
+                    ]
+                }
+            });
+            alert('Produkten har lagts till i kundvagnen!'); 
+        });
+
+        // 3. إطلاق حدث begin_checkout عند النقر على زر الدفع (الكود الأصلي الخاص بكِ)
         document.getElementById('complete-purchase-btn').addEventListener('click', function() {
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
